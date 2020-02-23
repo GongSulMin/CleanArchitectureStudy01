@@ -11,7 +11,7 @@ import gong.team.domain.repository.GithubRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single<GithubSearchRemoteDataSource> { GithubSearchRemoteDatasourceImpl(get() , get()) }
+    single<GithubSearchRemoteDataSource> { GithubSearchRemoteDatasourceImpl(get()) }
     single<GithubUserLocalDataSource> {GithubUserLocalDataSourceImpl(get())}
     single<GithubUserInfoRemoteDataSource> { GithubUserInfoRemoteDataSourceImpl(get()) }
     single<GithubRepository> { GithubRepositoryImpl(get() , get() , get() , get()) }

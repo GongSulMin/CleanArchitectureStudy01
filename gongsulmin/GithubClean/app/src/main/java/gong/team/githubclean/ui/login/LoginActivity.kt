@@ -8,15 +8,20 @@ import gong.team.githubclean.databinding.ActivityLoginBinding
 import gong.team.githubclean.ui.base.BaseActivity
 import gong.team.githubclean.ui.profile.ProfileActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import javax.inject.Inject
 
 class LoginActivity: BaseActivity<ActivityLoginBinding>(R.layout.activity_login) {
 
-    val loginViewModel: LoginViewModel by viewModel()
+//    val loginViewModel: LoginViewModel by viewModel()
 
+    @Inject
+    lateinit var loginViewModel: LoginViewModel
+//
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding {
             loginVM = loginViewModel
+
         }
 
         loginViewModel.navigateToMain.observe(this , Observer {
