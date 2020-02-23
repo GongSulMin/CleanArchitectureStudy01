@@ -41,16 +41,24 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    implementation "com.google.dagger:dagger:2.24"
-    kapt "com.google.dagger:dagger-compiler:2.24"
+//    implementation "com.google.dagger:dagger:2.24"
+//    kapt "com.google.dagger:dagger-compiler:2.24"
 
+
+    implementation libs.dagger
+    kapt libs.dagger_compiler
 
     implementation libs.recyclerview
     implementation libs.aac_lifecycle_viewmodel
     implementation libs.aac_lifecycle_extensions
+    implementation libs.retrofit
+    implementation libs.retrofit_gson
+    implementation libs.retrofit_rxjava
     implementation libs.rxandroid
     implementation libs.rxjava
     implementation libs.rxkotlin
+    implementation  libs.okhttp_logging
+    implementation  libs.okhttp
     implementation libs.koin_core
     implementation libs.koin_android_viewmodel
     implementation libs.koin_android

@@ -1,9 +1,16 @@
 apply plugin: 'java-library'
 apply plugin: 'kotlin'
+apply plugin: "kotlin-kapt"
 
 dependencies {
-    implementation  libs.rxjava
-    implementation  libs.rxkotlin
+
+    def javaxAnnotationVersion = '1.0'
+    def javaxInjectVersion = '1'
+
+    implementation "javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    implementation "javax.inject:javax.inject:${javaxInjectVersion}"
+    implementation libs.rxjava
+    implementation libs.rxkotlin
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
