@@ -14,8 +14,9 @@ import gong.team.domain.entity.*
 import gong.team.domain.repository.GithubRepository
 import io.reactivex.Completable
 import io.reactivex.Single
+import javax.inject.Inject
 
-class GithubRepositoryImpl(
+class GithubRepositoryImpl @Inject constructor (
     private val githubRemoteDataSource: GithubSearchRemoteDataSource,
     private val githubUserLocalDataSource: GithubUserLocalDataSource ,
     private val githubUserInfoRemoteDataSource: GithubUserInfoRemoteDataSource ,

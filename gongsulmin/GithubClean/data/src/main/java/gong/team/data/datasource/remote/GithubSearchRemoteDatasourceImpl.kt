@@ -6,11 +6,10 @@ import gong.team.data.entity.GithubSearchDto
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class GithubSearchRemoteDatasourceImpl
-    (
-    private val githubApi: GithubApi ,
-    private val githubLoginApi: GithubLoginApi
+class GithubSearchRemoteDatasourceImpl @Inject constructor(
+    val githubApi: GithubApi
 ): GithubSearchRemoteDataSource {
 
     override fun getGithubSearchResult(

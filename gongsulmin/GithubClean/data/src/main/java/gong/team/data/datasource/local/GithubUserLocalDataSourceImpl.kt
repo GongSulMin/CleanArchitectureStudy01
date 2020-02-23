@@ -6,8 +6,9 @@ import io.reactivex.Completable
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class GithubUserLocalDataSourceImpl(
+class GithubUserLocalDataSourceImpl @Inject constructor(
     private val tokenDao: TokenDao
 ) : GithubUserLocalDataSource {
 

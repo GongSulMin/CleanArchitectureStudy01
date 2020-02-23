@@ -7,9 +7,10 @@ import gong.team.data.response.GithubTokenResponse
 import gong.team.data.response.GithubUserReposReponse
 import gong.team.data.response.GithubUserResponse
 import io.reactivex.Single
+import javax.inject.Inject
 
-class GithubUserInfoRemoteDataSourceImpl(
-    private val githubApi: GithubApi
+class GithubUserInfoRemoteDataSourceImpl @Inject constructor(
+    val githubApi: GithubApi
 )
     : GithubUserInfoRemoteDataSource  {
 
@@ -34,7 +35,7 @@ class GithubUserInfoRemoteDataSourceImpl(
         val tokenRequest =
             GithubTokenRequest(
                 clientId = "95afcb4b4c096edece62" ,
-                clientSecret = "ef428364a8a1013ece84970eb7ece4e3f47cadbb" ,
+                clientSecret = "59154278e48eb51d32ac6b735fb072b32ccd2418" ,
                 note = "clean_app" ,
                 scopes = listOf("repo")
             )
