@@ -8,8 +8,9 @@ import gong.team.domain.repository.GithubRepository
 import io.reactivex.Single
 import io.reactivex.functions.BiFunction
 import io.reactivex.schedulers.Schedulers
+import javax.inject.Inject
 
-class ServiceRepositoryImpl(
+class ServiceRepositoryImpl @Inject constructor(
     val repository: GithubRepository
 ): ServiceRepository {
 

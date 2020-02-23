@@ -3,6 +3,7 @@ package gong.team.domain.usecase
 import gong.team.domain.entity.GithubTokenEntity
 import gong.team.domain.service.ServiceRepository
 import io.reactivex.Single
+import javax.inject.Inject
 
 /**
  *                          {
@@ -16,7 +17,7 @@ import io.reactivex.Single
  *
  */
 
-class GetGithubUserTokenUseCase (
+class GetGithubUserTokenUseCase @Inject constructor(
     private val repository: ServiceRepository
 ) {
     operator fun invoke(header: String): Single<GithubTokenEntity> {
